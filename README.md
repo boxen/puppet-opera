@@ -12,7 +12,7 @@ include opera
 
 ## Required Puppet Modules
 
-* `boxen`
+* `boxen >= 2.3.1`
 
 ## Development
 
