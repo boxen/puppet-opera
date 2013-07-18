@@ -4,8 +4,8 @@ describe 'opera' do
   let(:facts) { default_test_facts }
 
   it do
-    should include_class("boxen::config")
-    should contain_class("opera")
+    should include_class('boxen::config')
+    should contain_class('opera')
 
     should contain_exec('Download Opera').with({
       :command     => "/usr/bin/curl -o /test/boxen/cache/opera.dmg -C - -k -L -s --url 'http://www.opera.com/download/get/?id=35909&location=360&nothanks=yes&sub=marine'",
