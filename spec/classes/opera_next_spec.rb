@@ -9,7 +9,8 @@ describe 'opera::next' do
 
     should contain_exec('Download Opera-Next').with({
       :command     => "/usr/bin/curl -o /test/boxen/cache/opera-next.dmg -C - -k -L -s --url 'http://www.opera.com/download/get/?id=35821&location=360&nothanks=yes&sub=marine'",
-      :logoutput   => 'on_failure'
+      :logoutput   => 'on_failure',
+      :creates     => '/var/db/.puppet_appdmg_installed_Opera-Next'
     })
 
     should contain_package('Opera-Next').with({

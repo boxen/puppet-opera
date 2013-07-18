@@ -12,7 +12,8 @@ class opera {
   # Download Opera using cURL to prevent failure from dynamic url
   exec { 'Download Opera':
     command     => "/usr/bin/curl -o ${install_file} -C - -k -L -s --url '${download_url}'",
-    logoutput   => 'on_failure'
+    logoutput   => 'on_failure',
+    creates     => '/var/db/.puppet_appdmg_installed_Opera'
   }
   ~> package { 'Opera':
     provider => 'appdmg_eula',

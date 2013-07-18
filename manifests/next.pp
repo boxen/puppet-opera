@@ -12,7 +12,8 @@ class opera::next {
   # Download Opera using cURL to prevent failure from dynamic url
   exec { 'Download Opera-Next':
     command     => "/usr/bin/curl -o ${install_file} -C - -k -L -s --url '${download_url}'",
-    logoutput   => 'on_failure'
+    logoutput   => 'on_failure',
+    creates     => '/var/db/.puppet_appdmg_installed_Opera-Next'
   }
   ~> package { 'Opera-Next':
     provider => 'appdmg_eula',

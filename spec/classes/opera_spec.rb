@@ -9,7 +9,8 @@ describe 'opera' do
 
     should contain_exec('Download Opera').with({
       :command     => "/usr/bin/curl -o /test/boxen/cache/opera.dmg -C - -k -L -s --url 'http://www.opera.com/download/get/?id=35909&location=360&nothanks=yes&sub=marine'",
-      :logoutput   => 'on_failure'
+      :logoutput   => 'on_failure',
+      :creates     => '/var/db/.puppet_appdmg_installed_Opera'
     })
 
     should contain_package('Opera').with({
