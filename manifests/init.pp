@@ -4,8 +4,21 @@
 #
 #   include opera
 class opera {
-  package { 'Opera':
+  include boxen::config
+
+  $download_url = 'http://www.opera.com/download/get/?id=35909&location=360&nothanks=yes&sub=marine'
+  $install_file = "${boxen::config::cachedir}/opera.dmg"
+
+  # Download Opera using cURL to prevent failure from dynamic url
+  exec { 'Download Opera':
+    command     => "/usr/bin/curl -o ${install_file} -C - -k -L -s --url '${download_url}'",
+    logoutput   => 'on_failure'
+  }
+  ~> package { 'Opera':
     provider => 'appdmg_eula',
-    source   => 'http://www.opera.com/download/get/?id=35909&location=360&nothanks=yes&sub=marine'
+    source   => $install_file
+  }
+  ~> file { $install_file:
+    ensure => 'absent'
   }
 }
