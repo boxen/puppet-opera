@@ -8,6 +8,9 @@ Install [Opera](http://www.opera.com/), the alternative web browser
 
 ```puppet
 include opera
+
+# for Opera Next
+include opera::next
 ```
 
 ## Required Puppet Modules
