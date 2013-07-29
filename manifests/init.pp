@@ -4,10 +4,8 @@
 #
 #   include opera
 class opera {
-  include boxen::config
-
   $download_url = 'http://www.opera.com/download/get/?id=35909&location=360&nothanks=yes&sub=marine'
-  $install_file = "${boxen::config::cachedir}/opera.dmg"
+  $install_file = '/tmp/opera.dmg'
 
   # Download Opera using cURL to prevent failure from dynamic url
   exec { 'Download Opera':
