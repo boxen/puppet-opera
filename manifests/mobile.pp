@@ -6,7 +6,6 @@
 class opera::mobile {
   package { 'Opera-Mobile':
     provider => 'appdmg_eula',
-    source   => 'http://get.geo.opera.com/pub/opera/sdlbream/1
-210/Opera_Mobile_Emulator_12.1_Mac.dmg'
+    source   => 'http://get.geo.opera.com/pub/opera/sdlbream/1210/Opera_Mobile_Emulator_12.1_Mac.dmg'
   }
 }
