@@ -5,7 +5,7 @@ describe 'opera' do
     should contain_class('opera')
     should contain_package('Opera').with({
       :provider => 'appdmg_eula',
-      :source   => 'http://get.geo.opera.com/pub/opera/desktop/16.0.1196.62/mac/Opera_16.0.1196.62_Setup.dmg'
+      :source   => 'http://get.geo.opera.com/pub/opera/desktop/17.0.1241.45/mac/Opera_17.0.1241.45_Setup.dmg'
     })
   end
 end
