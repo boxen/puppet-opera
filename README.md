@@ -14,6 +14,9 @@ include opera::developer
 
 # for Opera Mobile Classic Emulator
 include opera::mobile
+
+# for Opera Mail
+include opera::mail
 ```
 
 ## Required Puppet Modules
