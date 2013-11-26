@@ -6,6 +6,6 @@
 class opera {
   package { 'Opera':
     provider => 'appdmg_eula',
-    source   => 'http://get.geo.opera.com/pub/opera/desktop/17.0.1241.45/mac/Opera_17.0.1241.45_Setup.dmg'
+    source   => 'http://get.opera.com/pub/opera/desktop/18.0.1284.49/mac/Opera_18.0.1284.49_Setup.dmg'
   }
 }
