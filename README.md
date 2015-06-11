@@ -9,6 +9,9 @@ Install [Opera](http://www.opera.com/), the alternative web browser
 ```puppet
 include opera
 
+# for Opera Beta
+include opera::beta
+
 # for Opera Developer
 include opera::developer
 
